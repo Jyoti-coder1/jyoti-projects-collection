@@ -1,2 +1,5 @@
-// Testing JS is linked
-console.log("To-do List App is ready to start!");
+const input = document.getElementById("taskInput");
+const addBtn = document.getElementById("addTaskBtn");
+const list = document.getElementById("taskList");
+
+console.log("Elements selected:", input, addBtn, list);

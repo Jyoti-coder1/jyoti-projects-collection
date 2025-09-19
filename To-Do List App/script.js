@@ -1,5 +1,25 @@
-const input = document.getElementById("taskInput");
-const addBtn = document.getElementById("addTaskBtn");
-const list = document.getElementById("taskList");
+const taskInput = document.getElementById("taskInput");
+const addTaskBtn = document.getElementById("addTaskBtn");
+const taskList = document.getElementById("taskList");
 
-console.log("Layout styled, no logic yet");
+//Function to add a task
+function addTask() {
+    const taskText = taskInput.value.trim(); //remove spaces
+    if(taskText === "") {
+        alert("Please enter a Task!");
+        return;
+    }
+
+    //Create <li> element
+    const li = document.createElement("li");
+    li.textContent = taskText;
+
+    //Append to task list
+    taskList.appendChild(li);
+
+    //clear input
+    taskInput.value = "";
+}
+
+//Event listener for Add button
+addTaskBtn.addEventListener("click", addTask);

@@ -26,9 +26,20 @@ function addTask() {
     const span = document.createElement("span");
     span.textContent = taskText;
 
-    //Append checkbox + text to li
+    // create delete button
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.className = "delete-btn";
+
+    //Delete task on button click
+    deleteBtn.addEventListener("click", () => {
+        taskList.removeChild(li);
+    });
+
+    //Append checkbox + text + delete button to li
     li.appendChild(checkbox);
     li.appendChild(span);
+    li.appendChild(deleteBtn);
 
     //Append li to task list
     taskList.appendChild(li);

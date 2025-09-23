@@ -5,6 +5,8 @@ const taskList = document.getElementById("taskList");
 //Function to add a task
 function addTask() {
     const taskText = taskInput.value.trim(); //remove spaces
+
+    // Validation: prevent empty task
     if(taskText === "") {
         alert("Please enter a Task!");
         return;
@@ -33,9 +35,15 @@ function addTask() {
 
     editBtn.addEventListener("click", () => {
         const newText = prompt("Edit your task:", span.textContent);
-        if(newText !== null & newText.trim() !== "") {
-            span.textContent = newText.trim();
+        
+        if (newText === null) return;
+        // Validation: prevent empty edit
+        
+        if(newText.trim() === "") {
+            alert("Task cannot be empty!");
+            return;
         }
+        span.textContent = newText.trim();
     });
 
     // create delete button

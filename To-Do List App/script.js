@@ -26,6 +26,18 @@ function addTask() {
     const span = document.createElement("span");
     span.textContent = taskText;
 
+    // Create Edit button
+    const editBtn = document.createElement("button");
+    editBtn.textContent = "Edit";
+    editBtn.className = "edit-btn";
+
+    editBtn.addEventListener("click", () => {
+        const newText = prompt("Edit your task:", span.textContent);
+        if(newText !== null & newText.trim() !== "") {
+            span.textContent = newText.trim();
+        }
+    });
+
     // create delete button
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
@@ -36,9 +48,10 @@ function addTask() {
         taskList.removeChild(li);
     });
 
-    //Append checkbox + text + delete button to li
+    //Append checkbox + text + edit + delete button to li
     li.appendChild(checkbox);
     li.appendChild(span);
+    li.appendChild(editBtn);
     li.appendChild(deleteBtn);
 
     //Append li to task list

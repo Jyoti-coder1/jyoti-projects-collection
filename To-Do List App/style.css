@@ -81,12 +81,16 @@ h1 {
 }
 
 .completed {
-    text-decoration: line-through;
-    color: gray;
     background-color: #f0f0f0;
     border-radius: 5px;
     padding: 2px 5px;
     transition: all 0.3s;
+}
+
+.completed span {
+    text-decoration: line-through;
+    color: gray;
+    transition:  all 0.3s;
 }
 
 .edit-btn {

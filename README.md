@@ -39,12 +39,16 @@ This project helps practice front-end web development skills like DOM manipulati
 ### 📖 How to Use
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Jyoti-coder1/jyoti-projects-collection/todo-list.git
-
-2. Open index.html in your browser.
+   git clone https://github.com/Jyoti-coder1/jyoti-projects-collection.git
 
 
-3. Start adding, editing, and completing tasks! 🎉
+2. Navigate to the To-Do List App folder:
+    cd jyoti-projects-collection/To-Do List App
+
+3. Open index.html in your browser.
+
+
+4. Start adding, editing, and completing tasks! 🎉
 
 
 ---

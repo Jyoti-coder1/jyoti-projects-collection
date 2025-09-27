@@ -1,10 +1,32 @@
 body {
     background-color: #293302;
     font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-h1 {
+header {
+    background-color: #8FB339;
+    color: #ffffff;
     text-align: center;
-    margin-top: 50px;
-    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    background: #f9f9f9;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #8FB339;
 }

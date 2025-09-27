@@ -1,1 +1,1 @@
-console.log("Day 1 setup complete! JavaScript is connected.");
+console.log("Day 2 setup complete! Layout is ready.");

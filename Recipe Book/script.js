@@ -1,1 +1,1 @@
-console.log("Day 2 setup complete! Layout is ready.");
+console.log("Day 3 setup complete! Form is visible and styled.");

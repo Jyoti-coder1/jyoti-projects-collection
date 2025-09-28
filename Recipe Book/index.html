@@ -15,7 +15,21 @@
     <!--Form section-->
     <section class="form-section">
         <h2>Add a Recipe</h2>
-        <p>[Form will go here in the next step]</p>
+        <form id="recipeForm">
+            <label for="name">Recipe Name</label>
+            <input type="text" id="name" placeholder="Enter the recipe name" required autocomplete="off">
+
+            <label for="ingredients">Ingredients</label>
+            <textarea id="ingredients" placeholder="List ingredients (comma seperated)" required autocomplete="off"></textarea>
+
+            <label for="steps">Preparation Steps</label>
+            <textarea id="steps" placeholder="Write preparation steps" required autocomplete="off"></textarea>
+
+            <label for="image">Recipe Image</label>
+            <input type="file" id="image" accept="image/*" required>
+
+            <button type="submit">Add Recipe</button>
+        </form>
     </section>
 
     <!--Search Section-->

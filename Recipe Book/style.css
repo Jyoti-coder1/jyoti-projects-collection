@@ -30,3 +30,43 @@ h2 {
     margin-bottom: 10px;
     color: #8FB339;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], textarea, input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    background: #fff;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    padding: 12px;
+    background-color: #8FB339;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #6d8f2e;
+}

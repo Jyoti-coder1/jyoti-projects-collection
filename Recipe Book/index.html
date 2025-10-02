@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Book</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!--Header-->
     <header>
@@ -20,7 +22,8 @@
             <input type="text" id="name" placeholder="Enter the recipe name" required autocomplete="off">
 
             <label for="ingredients">Ingredients</label>
-            <textarea id="ingredients" placeholder="List ingredients (comma seperated)" required autocomplete="off"></textarea>
+            <textarea id="ingredients" placeholder="List ingredients (comma seperated)" required
+                autocomplete="off"></textarea>
 
             <label for="steps">Preparation Steps</label>
             <textarea id="steps" placeholder="Write preparation steps" required autocomplete="off"></textarea>
@@ -44,6 +47,20 @@
         <div class="cards-container"></div>
     </section>
 
+    <!-- Recipe Details Modal -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalName"></h2>
+            <img id="modalImage" src="" alt="" />
+            <h3>Ingredients</h3>
+            <p id="modalIngredients"></p>
+            <h3>Preparation Steps</h3>
+            <p id="modalSteps"></p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>

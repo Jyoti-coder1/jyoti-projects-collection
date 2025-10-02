@@ -7,6 +7,15 @@ const ingredientsInput = document.getElementById("ingredients");
 const stepsInput = document.getElementById("steps");
 const imageInput = document.getElementById("image");
 
+// Show modal elements
+const modal = document.getElementById("recipeModal");
+const modalName = document.getElementById("modalName");
+const modalImage = document.getElementById("modalImage");
+const modalIngredients = document.getElementById("modalIngredients");
+const modalSteps = document.getElementById("modalSteps");
+const closeModal = document.querySelector(".close");
+
+
 // Select the cards container
 const cardsContainer = document.querySelector(".cards-container");
 
@@ -56,12 +65,32 @@ recipeForm.addEventListener("submit", function(event) {
     reader.readAsDataURL(imageInput.files[0]);
 });
 
+// Show modal with recipe details
+function showModal(recipe) {
+    modalName.textContent = recipe.name;
+    modalImage.src = recipe.image;
+    modalIngredients.textContent = recipe.ingredients;
+    modalSteps.textContent = recipe.steps;
+    modal.style.display = "block";
+}
+
+// Close modal on × click
+closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+// Close modal when clicking outside the modal content
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+
 // Function to display recipes as cards
 function displayRecipes() {
-    // Clear existing cards first
     cardsContainer.innerHTML = "";
-
-    // Loop through recipes array and create cards
+    
     recipes.forEach((recipe) => {
         const card = document.createElement("div");
         card.className = "recipe-card";
@@ -75,8 +104,14 @@ function displayRecipes() {
 
         card.appendChild(img);
         card.appendChild(title);
+
+        // Show modal when card clicked
+        card.addEventListener("click", () => {
+            showModal(recipe);
+        });
+
         cardsContainer.appendChild(card);
-    });
+    });
 }
 
 // Display recipes on page load
